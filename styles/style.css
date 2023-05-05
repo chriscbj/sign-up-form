@@ -1,33 +1,139 @@
 @font-face {
-    font-family: 'Norse Bold';
-    src: url('fonts/Norse-Bold.otf') format('otf');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'NorseBold';
+    src: url('/fonts/Norse-Bold.otf');
 }
 
-#background-img{
-    position: absolute;
-    width: 50%;
-    height: 100%;
+* {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    margin: 0;
 }
 
-#my-logo {
-    width: 10%;
+#main {
+    display: flex;
+    width: 100vw;
 }
 
-#logo-container {
-    margin-left: 1rem;
-    margin-top: 3rem;
-    font-family: 'Norse-Bold', sans-serif;
-    position: relative;
-    display: inline-block;
+#left {
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    height: 100vh;
+    background-image: url("/background-img.avif");
+    background-repeat: no-repeat;
 }
 
-h1 {
-    position: absolute;
-    top: -10px;
-    left: 11%;
-    transform: (-50%, -50%);
+#left > h1 {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'NorseBold', sans-serif;
     color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 6em;
+    width: 35vw;
+    height: 15vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12rem;
+}
+
+#left > h1 > img {
+    width: 4vw;
+    height: 7rem;
+}
+  
+#right {
+    position: relative;
+    width: 100vw;
+}
+
+#section1, #section2, #section3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70vw;
+    height: calc(100vh / 3);
+}
+
+#section1 {
+    background-color: #E5E7EB;
+}
+
+#section1 > h1 {
+    font-size: 25px;
+    padding: 25px;
+    margin-top: 8vh;
+    width: 70%;
+    margin-left: 2rem;
+}
+
+#section2 {
+    top: calc(100vh / 3);
+    z-index: 1;
+    box-shadow: 2px 1px black;
+}
+
+#section2 form{
+    margin-left: 3rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#section2 > h1 {
+    font-size: 25px;
+    margin-left: 3.5rem;
+    margin-top: 0.5rem;
+}
+
+#section3 {
+    top: calc((100vh / 3) * 2);
+    background-color: #E5E7EB;
+    display: flex;
+}
+
+.section3-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+    margin-left: 4rem;
+    margin-top: 2rem;
+}
+
+.section3-container > p {
+    margin-top: 50px;
+}
+
+.input-field {
+    padding: 4px;
+    margin: 5px;
+    width: 60%;
+    box-sizing: border-box;
+    border-color: #E5E7EB;
+}
+
+.input-field:focus {
+    border: 4px solid #1f8cf3;
+    box-shadow: 2px 1px solid black;
+}
+
+label {
+    margin-top: 7px;
+    margin-left: 8px;
+}
+
+.input-field-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+button {
+    font-size: 18px;
+    width: 240px;
+    background-color: #596D48;
+    height: 60px;
+    color: white;
+    font-weight: 800;
+    border-radius: 8px;
 }
